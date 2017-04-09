@@ -57,7 +57,7 @@ function login(password){
 		return "FAIL!";
 	}
 }
-console.log(login("test"));
+console.log("2."+login("test"));
 /*
  * #3
  * Function - isGreaterThan
@@ -78,7 +78,7 @@ function isGreaterThan(first, second){
 		return false;
 	}
 }
-console.log(isGreaterThan(10,1));
+console.log("3."+isGreaterThan(10,1));
 
 
 /*
@@ -92,7 +92,15 @@ console.log(isGreaterThan(10,1));
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
+function mustBeTrue(boo){
+	if(boo === "true"){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+console.log("4."+mustBeTrue("true"));
 
 
 /*
@@ -106,7 +114,15 @@ console.log(isGreaterThan(10,1));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+	if(word.length === 3){
+		return "Word to Big Bird!";
+	}
+	else{
+		return "WRONG!";
+	}
+}
+console.log(bigBird("dog"));
 
 
 /*
@@ -121,6 +137,15 @@ console.log(isGreaterThan(10,1));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
+function isEqual(first, second){
+	if(first === second){
+		return "You look mahvelous";
+	}
+	else{
+		return "I don't know who you are anymore";
+	}
+}
+console.log(isEqual("dog","cat"));
 
 
 /*
@@ -135,7 +160,15 @@ console.log(isGreaterThan(10,1));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
+function notEqual(first, second){
+	if(first != second){
+		return "Opposites do attract";
+	}
+	else{
+		return "Cause it's like your my mirror";
+	}
+}
+console.log(notEqual("happy", "angry"));
 
 /*
  * #8
@@ -148,7 +181,15 @@ console.log(isGreaterThan(10,1));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function spareChange(money){
+	if(money > 100){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+console.log("8."+spareChange(50));
 
 
 /*
@@ -164,8 +205,16 @@ console.log(isGreaterThan(10,1));
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function dirty30(one, two, three){
+	var sum = one + two + three;
+	if(sum > 30){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+console.log("9."+dirty30(10,10,20));
 
 /*
  * #10
@@ -178,8 +227,15 @@ console.log(isGreaterThan(10,1));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function evenStevens(num){
+	if(num%2 === 0){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+console.log("10."+evenStevens(4));
 
 
 /*
@@ -194,7 +250,15 @@ console.log(isGreaterThan(10,1));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
+function daClub(cover, age){
+	if(cover >= 21 && age >= 21){
+		return "Welcome to Legends Lounge";
+	}
+	else{
+		return "Chuck E Cheese is across the street";
+	}
+}
+console.log(daClub(25, 28));
 
 /*
  * #12
@@ -208,7 +272,15 @@ console.log(isGreaterThan(10,1));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
+function graduate(credits, thesis){
+	if(credits >= 120 || thesis >= 120){
+		return "Congratulations on a job well done";
+	}
+	else{
+		return "See you in summer school";
+	}
+}
+console.log(graduate(100, 100));
 
 
 /*
@@ -222,7 +294,18 @@ console.log(isGreaterThan(10,1));
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
+function moneyTrain(speed){
+	if(speed < 50){
+		return "You are riding Honolulu's Rail";
+	}
+	else if(speed < 100){
+		return "You are riding an Amtrak";
+	}
+	else{
+		return "Now you ballin' in the Shinkansen!";
+	}
+}
+console.log(moneyTrain(100));
 
 /*
  * #14
@@ -268,14 +351,22 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
+var players = [1, 2, 3, 4, 5];
+
+for(var i=0; i<players.length; i++){
+	console.log("Player: "+players[i]);
+}
 
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
-  var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+for(var i=0; i<myFavFoods.length; i++){
+	console.log(myFavFoods[i]);
+}
 
 /*
  * #17
@@ -291,7 +382,16 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [2, 4, 6, 8, 10];
+var total = 0;
 
+function sumItUp(arr){
+	for(var i=0; i<arr.length; i++){
+		total = total + arr[i];
+	}
+	return total;
+}
+console.log("Total: "+sumItUp(numArray));
 
 
 /*
@@ -305,6 +405,7 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through the players array and will put all the even number indexed players in the `east` array and the rest in the `west` array.
  * Console.log both the east and west arrays.
 */ 
+
 
 /*
  * #19
