@@ -161,7 +161,7 @@ console.log(isEqual("dog","cat"));
  * Console.log your result.
 */
 function notEqual(first, second){
-	if(first != second){
+	if(first !== second){
 		return "Opposites do attract";
 	}
 	else{
@@ -471,16 +471,14 @@ Final Boss
 */
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
- 
-  
-  
 
-
-
-
-
-
-
-
-
-
+function removeLetter(str){
+	var aArray = [];
+	for(var i=0; i<str.length; i++){
+		if(str[i] !== 'a' && str[i] !== 'A'){
+			aArray.push(str[i]);
+		}
+	}
+	return aArray;
+}
+console.log(removeLetter(phrase));
