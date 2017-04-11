@@ -321,8 +321,19 @@ console.log(moneyTrain(100));
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 28;
+var doughnutPrice = 3;
+var doughnutBought= 0;
 
-
+function buyDoughnut(){
+	if(budget >= doughnutPrice){
+		budget = budget - doughnutPrice;
+		doughnutBought++;
+	}
+}
+buyDoughnut();
+console.log("Budget: "+budget);
+console.log("Doughnuts bought: "+doughnutBought);
 
 
 /*
@@ -405,7 +416,21 @@ console.log("Total: "+sumItUp(numArray));
  * The function will loop through the players array and will put all the even number indexed players in the `east` array and the rest in the `west` array.
  * Console.log both the east and west arrays.
 */ 
-
+var east = [];
+var west = [];
+function allStars(ballers){
+	for(var i=0; i<ballers.length; i++){
+		if(ballers[i] % 2 === 0){
+			east.push(ballers[i]);
+		}
+		else{
+			west.push(ballers[i]);
+		}
+	}
+}
+console.log(allStars(players));
+console.log("East Team: "+east);
+console.log("West Team: "+west);
 
 /*
  * #19
@@ -419,8 +444,19 @@ console.log("Total: "+sumItUp(numArray));
  * Console.log your results.
 */ 
 
-  var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+function subways(special){
+  for(var i = 0; i<special.length; i++){
+    if(i%2 === 1){
+      special.splice(i, 1, "Classic Tuna"); 
+    }
+
+  }
+ return special;
+}
+
+console.log(subways(subOftheDay));
 
 /*
 Final Boss

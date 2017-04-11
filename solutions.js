@@ -322,7 +322,7 @@ var doughnutPrice = 5;
 var doughnutBought = 0;
 
 function buyDoughnut(){
- if(budget >= doughnutPrice){ 
+  if(budget >= doughnutPrice){ 
   budget -= doughnutPrice;
   doughnutBought++;
  }
@@ -426,7 +426,7 @@ console.log("sumitup ", sumItUp(numArray));
     for(var i = 0; i<ballers.length; i++){
       console.log(ballers[i]);
       if(i%2 === 0){
-        //console.log(i);
+        console.log(i);
       east.push(ballers[i]);
       }else{
         west.push(ballers[i]);
